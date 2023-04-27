@@ -1,0 +1,85 @@
+@include font('Helvetica World', HelveticaWorld-Bold, 700, normal);
+@include font('Helvetica World', HelveticaWorld-Regular, 400, normal);
+@include font('Helvetica Cyrillic', Helvetica_cyr, 400, normal);
+@include font('Helvetica CE', HelveticaCE, 500, normal);
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-tap-highlight-color:  transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  transparent;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $mainTextColor;
+  font-family: $mainFontFamily;
+  line-height: 1;
+  font-size: $mainFontSize;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: $mainFontFamily;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}

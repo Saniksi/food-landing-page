@@ -1,0 +1,17 @@
+$mainColor: #fa2bb2;
+$mainTextColor: #ffffff;
+$mainFontFamily: 'Helvetica World';
+$mainFontSize: 16px;
+
+$colorButton: #7f00ac;
+$colorButtonHover: #640088;
+$colorAccent: #7f00ac;
+
+$index-1: 1; // Для наповзаючих елементів у загальному потоці
+$index-2: 2; // Для наповзаючих елементів у загальному потоці
+$index-3: 3; // Для масок
+$index-4: 4; // Для сайдбарів
+$index-5: 5; // Для модалок
+$index-6: 6; // Для елементів перекривающих все
+
+$mouseDevice: '(hover: hover) and (pointer: fine)'; // Медіазапит обирає тільки мишки і тачпад

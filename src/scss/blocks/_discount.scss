@@ -1,0 +1,115 @@
+.discount {
+  position: relative;
+  padding: 5px 0 25px 0;
+  max-width: 366px;
+  text-align: center;
+  background: $mainColor;
+  border-radius: 0px 0px 45px 45px;
+
+  &--size-small {
+    width: 327px;
+    height: 153px;
+    border-radius: 45px;
+
+    @include media(max, 374.8px) {
+      width: 300px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: transparent;
+    cursor: pointer;
+    color: black;
+    font-size: 1.5em;
+    line-height: 1;
+
+    &:hover {
+      color: rgb(131, 129, 129);
+    }
+  }
+
+  &__decor {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -0.06em;
+
+    &--font-size-40 {
+      font-size: 40px;
+    }
+
+    @include media(max, 374.8px) {
+      font-size: 40px;
+    }
+  }
+
+  &__form {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    height: 35px;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 10px 0 0 10px;
+
+    &--size-small {
+      height: 28px;
+    }
+  }
+
+  &__submit {
+    width: 81px;
+    height: 35px;
+    padding: 1px 13px 3px 9px;
+    font-family: 'Helvetica Cyrillic';
+    font-weight: 700;
+    font-size: 22px;
+    color: #ffffff;
+    background: $colorAccent;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #640088;
+    }
+
+    &--size-small {
+      height: 28px;
+      font-size: 16px;
+    }
+  }
+
+  &__description {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 0px;
+    height: 0px;
+    border-top: 19px solid $mainColor;
+    border-right: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 19px solid transparent;
+  }
+}

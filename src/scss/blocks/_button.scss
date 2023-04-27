@@ -1,0 +1,17 @@
+.button {
+  min-width: 242px;
+  padding: 4px 20px 8px 20px;
+  background: $colorButton;
+  border-radius: 49px;
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: $mainColor;
+  cursor: pointer;
+  
+  @media ($mouseDevice) {
+    &:hover {
+      background-color: $colorButtonHover;
+    }
+  }
+}

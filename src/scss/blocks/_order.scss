@@ -1,0 +1,132 @@
+.order {
+  display: flex;
+
+  position: relative;
+  top: -320px;
+  height: 320px;
+  background: linear-gradient(0deg, #fa2bb2, #fa2bb2), #ff922c;
+
+  @include media(min, 992px) {
+    height: 370px;
+  }
+
+  &__button {
+    position: absolute;
+    top: -17.5px;
+    left: 50%;
+    z-index: $index_1;
+    transform: translateX(-50%);
+  }
+
+  &__cards {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 24px;
+    margin: 0px auto 20px auto;
+    min-height: 272px;
+    overflow-x: hidden;
+    cursor: pointer;
+
+    @include media(min, 992px) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .dragging {
+    cursor: grab;
+  }
+
+  &__card {
+    position: relative;
+    min-width: 201px;
+    height: 205px;
+    padding: 100px 23px 18px 20px;
+    background-color: #ffffff;
+    backdrop-filter: blur(21px);
+    border-radius: 24px;
+    transition: background-color 0.3s ease-in-out;
+
+    &--checked {
+      background-color: $colorAccent;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: -67px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #07143b;
+    transition: all 0.3s ease-in-out;
+
+    &--checked {
+      color: #ffffff;
+    }
+  }
+
+  &__rating {
+    margin-top: 6px;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__price {
+    width: 50%;
+    margin-top: 33px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $colorAccent;
+    transition: all 0.3s ease-in-out;
+
+    &--checked {
+      color: #ffffff;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 22px;
+    bottom: 18.23px;
+    width: 19.63px;
+    height: 19.63px;
+    background-color: $colorButton;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &--checked {
+      background-color: $mainColor;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 8.12px;
+      height: 1.36px;
+      background-color: #ffffff;
+      border-radius: 1px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8.12px;
+      height: 1.36px;
+      background-color: #ffffff;
+      border-radius: 1px;
+    }
+  }
+}

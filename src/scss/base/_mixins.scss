@@ -1,0 +1,50 @@
+@mixin font($fontName, $fileName, $weight, $style) {
+  @font-face {
+    font-family: $fontName;
+    src: url('../fonts/#{$fileName}.eot');
+    src: local($fileName);
+    src: url('../fonts/#{$fileName}.woff2') format('woff2'),
+      url('../fonts/#{$fileName}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin media($mod: max, $size) {
+  @media (#{$mod}-width: $size) {
+    @content;
+  }
+}
+
+/* flex properties */
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//@extend %name
+
+%absolute {
+  position: absolute;
+}
+
+%absolute-center {
+  @extend %absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%fixed {
+  position: fixed;
+}
+
+%fixed-center {
+  @extend %absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

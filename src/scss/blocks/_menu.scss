@@ -1,0 +1,229 @@
+.menu {
+  position: relative;
+  top: -320px;
+  left: 50%;
+  z-index: $index-1;
+  transform: translateX(-50%);
+  overflow: hidden;
+  @extend %flex-center;
+
+  &__wrapper {
+    position: relative;
+    @extend %flex-center;
+    flex-direction: column;
+    width: 1440px;
+    padding-top: 213px;
+
+    // Show to Vova
+    // border: 3px solid black;
+    // border-top-left-radius: 100% 35%;
+    // border-top-right-radius: 100% 35%;
+    // border-top-left-radius: 1440px 370px;
+    // border-top-right-radius: 1440px 370px;
+    // background: linear-gradient(180deg, #ffffff 44.79%, #f4f4f4 100%);
+    // box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.2);
+
+    background-image: url(../../img/background/menu_bg.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    top: 117px;
+    transform: translateX(-50%);
+    width: 290px;
+    height: 133px;
+    padding-top: 45px;
+    font-family: 'Helvetica Cyrillic';
+    font-weight: 700;
+    font-size: 19px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    background: url(../../img/semicircle_btn.svg) center center/cover no-repeat;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 14px;
+      background: url(../../img/icons/triangle.svg) center center/cover
+        no-repeat;
+    }
+  }
+
+  &__button {
+    z-index: $index-1;
+    margin-top: 110px;
+    transform: translateY(50%);
+
+    &:last-child {
+      transform: none;
+      margin-top: 35px;
+
+      @include media(min, 992px) {
+        margin-top: 22px;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 17px 17px 0px 17px;
+    width: 100%;
+    max-width: 1077px;
+    background: #ffffff;
+    border-radius: 46px 46px 0 0;
+
+    &:last-child {
+      border-radius: 0;
+      padding: 29px 17px 55px 17px;
+
+      @include media(min, 992px) {
+        padding: 31px 17px 73px 17px;
+      }
+    }
+
+    @include media(min, 992px) {
+      border-radius: 200px 200px 0 0;
+    }
+  }
+
+  &__items {
+    position: relative;
+    @extend %flex-center;
+    flex-wrap: wrap;
+    row-gap: 18px;
+    column-gap: 14px;
+    margin-top: 30px;
+    max-width: 520px;
+  }
+
+  &__item {
+    padding: 7px 8px;
+    width: 75px;
+    height: 113px;
+    background: #e6e6e6;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &--selected {
+      font-weight: 700;
+      background: #ababab;
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: -172px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $index-1;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__icon {
+    @extend %flex-center;
+    width: 59px;
+    height: 59px;
+    background: #ffffff;
+    border: 2px solid #bcbcbc;
+    border-radius: 100%;
+  }
+
+  &__svg {
+    fill: #dedede;
+    stroke: #8d8d8d;
+
+    &--selected {
+      fill: #fed6ff;
+    }
+  }
+
+  &__description {
+    line-height: 1.44;
+    text-align: center;
+    color: #8d8d8d;
+    letter-spacing: -0.03em;
+
+    &--selected {
+      color: #ffffff;
+    }
+  }
+
+  &__cards {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include media(min, 375px) {
+      width: 375px;
+    }
+
+    @include media(min, 576px) {
+      width: 550px;
+    }
+
+    @include media(min, 768px) {
+      width: 700px;
+    }
+
+    @include media(min, 992px) {
+      width: 800px;
+    }
+  }
+
+  .dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+
+  &__card {
+    min-width: 151px;
+    background: #f1f1f1;
+    border-radius: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(min, 992px) {
+      min-width: 183px;
+    }
+  }
+
+  &__image {
+    padding: 43px 0 30px 0;
+    height: 167px;
+    width: 100%;
+    @include media(min, 992px) {
+      height: 202px;
+      padding: 45px 0 35px 0;
+    }
+  }
+
+  &__text {
+    padding: 15px 19px;
+    font-family: 'Helvetica CE';
+    line-height: 21px;
+    background: #7f00ac;
+    border-radius: 0 0 20px 20px;
+
+    @include media(min, 992px) {
+      padding: 10px 7px;
+    }
+  }
+}

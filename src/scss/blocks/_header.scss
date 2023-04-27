@@ -1,0 +1,25 @@
+.header {
+  min-height: 450px;
+  background: url(../../img/background/header_bg.jpg) center center/cover
+    no-repeat;
+  border-radius: 0px 0px 40px 40px;
+
+  &__discount {
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 80px;
+    font-family: 'Leckerli One';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    @include media(max, 576px) {
+      width: 240px;
+      margin: 80px auto 0 auto;
+    }
+  }
+}
