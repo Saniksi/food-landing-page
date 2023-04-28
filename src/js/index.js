@@ -1,8 +1,8 @@
 // Додаємо анімацію Lottie на сайт
 const animation = lottie;
 const rouletteContainer = document.querySelector('.promo__animation');
-const balloonsContainer = document.querySelector('.promo__balloons');
-const balloonsContainer_2 = document.querySelector('.promo__balloons-2');
+const balloonsContainer = document.querySelector('.promo__balloons-left');
+const balloonsContainer_2 = document.querySelector('.promo__balloons-right');
 
 animation.loadAnimation({
   container: rouletteContainer,
@@ -35,7 +35,8 @@ const itemsMenu = document.querySelectorAll('.menu__item');
 itemsMenu.forEach((item) => {
   item.addEventListener('click', (event) => {
     const itemDescription = item.querySelector('.menu__description');
-    const itemSvg = item.querySelector('.menu__svg');
+    const itemIcon = item.querySelector('.menu__icon');
+    const isItemSelected = item.classList.contains('menu__item--selected');
 
     if (event.target.className === 'discount__cross') {
       deleteDiscount();
@@ -48,7 +49,14 @@ itemsMenu.forEach((item) => {
 
     item.classList.toggle('menu__item--selected');
     itemDescription.classList.toggle('menu__description--selected');
-    itemSvg.classList.toggle('menu__svg--selected');
+
+    if (isItemSelected) {
+      itemIcon.firstElementChild.style.display = 'block';
+      itemIcon.lastElementChild.style.display = 'none';
+    } else {
+      itemIcon.firstElementChild.style.display = 'none';
+      itemIcon.lastElementChild.style.display = 'block';
+    }
   });
 });
 
@@ -240,5 +248,4 @@ menuBtnLuck.addEventListener('click', () => {
   const randomImg = Math.floor(Math.random() * lengthOrderCards) + 1;
 
   containerImage.setAttribute('src', `img/menu_${randomImg}.jpg`);
-
 });

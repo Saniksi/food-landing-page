@@ -13,16 +13,6 @@
     flex-direction: column;
     width: 1440px;
     padding-top: 213px;
-
-    // Show to Vova
-    // border: 3px solid black;
-    // border-top-left-radius: 100% 35%;
-    // border-top-right-radius: 100% 35%;
-    // border-top-left-radius: 1440px 370px;
-    // border-top-right-radius: 1440px 370px;
-    // background: linear-gradient(180deg, #ffffff 44.79%, #f4f4f4 100%);
-    // box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.2);
-
     background-image: url(../../img/background/menu_bg.svg);
     background-position: center top;
     background-repeat: no-repeat;
@@ -140,16 +130,20 @@
     background: #ffffff;
     border: 2px solid #bcbcbc;
     border-radius: 100%;
-  }
 
-  &__svg {
-    fill: #dedede;
-    stroke: #8d8d8d;
-
-    &--selected {
-      fill: #fed6ff;
+    img:last-child {
+      display: none;
     }
   }
+
+  // &__svg {
+  //   fill: #dedede;
+  //   stroke: #8d8d8d;
+
+  //   &--selected {
+  //     fill: #fed6ff;
+  //   }
+  // }
 
   &__description {
     line-height: 1.44;

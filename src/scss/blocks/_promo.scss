@@ -12,7 +12,7 @@
     z-index: $index-2;
   }
 
-  &__balloons {
+  &__balloons-left {
     position: absolute;
     top: 84px;
     left: -20%;
@@ -25,7 +25,7 @@
     }
   }
 
-  &__balloons-2 {
+  &__balloons-right {
     position: absolute;
     top: 125px;
     right: 0;
